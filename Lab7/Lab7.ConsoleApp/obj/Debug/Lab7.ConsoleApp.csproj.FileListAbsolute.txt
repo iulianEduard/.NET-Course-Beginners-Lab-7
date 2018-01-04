@@ -5,3 +5,10 @@ D:\Work\Cursuri\.NET Beginners\.NET-Course-Beginners-Lab-7\.git\Lab7\Lab7.Consol
 D:\Work\Cursuri\.NET Beginners\.NET-Course-Beginners-Lab-7\.git\Lab7\Lab7.ConsoleApp\obj\Debug\Lab7.ConsoleApp.csproj.CoreCompileInputs.cache
 D:\Work\Cursuri\.NET Beginners\.NET-Course-Beginners-Lab-7\.git\Lab7\Lab7.ConsoleApp\obj\Debug\Lab7.ConsoleApp.exe
 D:\Work\Cursuri\.NET Beginners\.NET-Course-Beginners-Lab-7\.git\Lab7\Lab7.ConsoleApp\obj\Debug\Lab7.ConsoleApp.pdb
+D:\Work\Cursuri\.NET Beginners\.NET-Course-Beginners-Lab-7\Lab7\Lab7.ConsoleApp\bin\Debug\Lab7.ConsoleApp.exe.config
+D:\Work\Cursuri\.NET Beginners\.NET-Course-Beginners-Lab-7\Lab7\Lab7.ConsoleApp\bin\Debug\Lab7.ConsoleApp.exe
+D:\Work\Cursuri\.NET Beginners\.NET-Course-Beginners-Lab-7\Lab7\Lab7.ConsoleApp\bin\Debug\Lab7.ConsoleApp.pdb
+D:\Work\Cursuri\.NET Beginners\.NET-Course-Beginners-Lab-7\Lab7\Lab7.ConsoleApp\obj\Debug\Lab7.ConsoleApp.csprojResolveAssemblyReference.cache
+D:\Work\Cursuri\.NET Beginners\.NET-Course-Beginners-Lab-7\Lab7\Lab7.ConsoleApp\obj\Debug\Lab7.ConsoleApp.csproj.CoreCompileInputs.cache
+D:\Work\Cursuri\.NET Beginners\.NET-Course-Beginners-Lab-7\Lab7\Lab7.ConsoleApp\obj\Debug\Lab7.ConsoleApp.exe
+D:\Work\Cursuri\.NET Beginners\.NET-Course-Beginners-Lab-7\Lab7\Lab7.ConsoleApp\obj\Debug\Lab7.ConsoleApp.pdb

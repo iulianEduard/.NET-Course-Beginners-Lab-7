@@ -30,7 +30,7 @@ namespace Lab7.ConsoleApp.Generics
         {
             Console.WriteLine("Display from generic class:");
 
-            foreach(var item in classList)
+            foreach(T item in classList)
             {
                 Console.WriteLine($"{item.ToString()}");
             }

@@ -12,7 +12,9 @@ namespace Lab7.ConsoleApp
     {
         static void Main(string[] args)
         {
-            WorkingWithEvents();
+            WorkingWithGenericDictionaryExample2();
+
+            Console.ReadKey();
         }
 
         #region Generics
@@ -52,6 +54,8 @@ namespace Lab7.ConsoleApp
             listOfInt.Add(2);
             listOfInt.Add(4);
 
+            var person = new Person { Age = 1, FirstName = "sdadsa" };
+
             List<int> anotherListOfInt = new List<int>
             {
                 1, 3, 5
@@ -65,6 +69,8 @@ namespace Lab7.ConsoleApp
             {
                 Console.WriteLine(i);
             }
+
+            int _value = listOfInt[3];
 
             listOfInt.Reverse();
 
@@ -85,10 +91,10 @@ namespace Lab7.ConsoleApp
             personList.Add(new Person("August", "Cezar", 31));
             personList.Add(new Person("Ragnar", "Floki", 40));
 
-            personDictionary.Add(1, personList[1]);
-            personDictionary.Add(2, personList[2]);
-            personDictionary.Add(3, personList[3]);
-            personDictionary.Add(4, personList[4]);
+            personDictionary.Add(1, personList[0]);
+            personDictionary.Add(2, personList[1]);
+            personDictionary.Add(3, personList[2]);
+            personDictionary.Add(4, personList[3]);
 
             foreach (KeyValuePair<int, Person> keyValuePair in personDictionary)
             {
@@ -101,9 +107,11 @@ namespace Lab7.ConsoleApp
             Dictionary<int, Person> personDictionary = new Dictionary<int, Person>();
 
             List<Person> personList = new List<Person>();
+            List<int> x = new List<int>();
+
             personList.Add(new Person("Eduard", "Romulus", 29));
             personList.Add(new Person("Radu", "Constatin", 30));
-            personList.Add(new Person("August", "Cezar", 31));
+            personList.Add(new Person("August", "Cezar", 30));
             personList.Add(new Person("Ragnar", "Floki", 40));
 
             foreach (Person person in personList)
@@ -138,7 +146,7 @@ namespace Lab7.ConsoleApp
             employeeCollection.AddItem(new Employee { Id = 3, Name = "Constantin", Position = "Developer", Salary = 1030.0 });
             employeeCollection.AddItem(new Employee { Id = 4, Name = "Dumitry", Position = "Developer", Salary = 1004.0 });
 
-
+            employeeCollection.Display();
         }
 
         #endregion Generics
@@ -162,7 +170,7 @@ namespace Lab7.ConsoleApp
 
             car1.RegisterWithCarEngine(new Car.CarEngineHandler(OnCarEngineEvent));
 
-            for(int i = 10; i <= 100; i = i + 10)
+            for (int i = 10; i <= 100; i = i + 10)
             {
                 car1.Accelerate(i);
             }
@@ -225,6 +233,87 @@ namespace Lab7.ConsoleApp
         {
             Console.WriteLine($"-> Message from CarExploed event: {message}");
         }
+
+        static void AnonymusFunctions()
+        {
+            List<int> listOfInt = new List<int>();
+            listOfInt.Add(2);
+            listOfInt.Add(7);
+            listOfInt.Add(4);
+            listOfInt.Add(5);
+
+            var numerePare = new List<int>();
+            listOfInt.ForEach(x =>
+            {
+                if (x % 2 == 0)
+                {
+                    numerePare.Add(x);
+                }
+            });
+        }
+
+        static void TraditionalDelegateSyntax()
+        {
+            List<int> list = new List<int>();
+            list.AddRange(new int[] { 20, 1, 4, 8, 9, 44 });
+
+            Predicate<int> callback = IsEvenNumber;
+            List<int> evenNumbers = list.FindAll(callback);
+
+            Console.WriteLine("Here are your even numbers:");
+            foreach (int evenNumber in evenNumbers)
+            {
+                Console.Write("{0}\t", evenNumber);
+
+            }
+            Console.WriteLine();
+        }
+
+        static bool IsEvenNumber(int i)
+        {
+            return (i % 2) == 0;
+        }
+
+        static void AnonymousMethodSyntax()
+        {
+            // Make a list of integers.
+            List<int> list = new List<int>();
+            list.AddRange(new int[] { 20, 1, 4, 8, 9, 44 });
+
+            // Now, use an anonymous method.
+            List<int> evenNumbers = list.FindAll(delegate (int i)
+            {
+                return (i % 2) == 0;
+            });
+
+            Console.WriteLine("Here are your even numbers:");
+            foreach (int evenNumber in evenNumbers)
+            {
+                Console.Write("{0}\t", evenNumber);
+            }
+
+            Console.WriteLine();
+        }
+
+        static void LambdaExpressionSyntax()
+        {
+            // Make a list of integers.
+            List<int> list = new List<int>();
+            list.AddRange(new int[] { 20, 1, 4, 8, 9, 44 });
+            
+            // Now, use a C# lambda expression.
+            List<int> evenNumbers = list.FindAll(i => (i % 2) == 0);
+
+            Console.WriteLine("Here are your even numbers:");
+
+            foreach (int evenNumber in evenNumbers)
+            {
+                Console.Write("{0}\t", evenNumber);
+            }
+
+            Console.WriteLine();
+        }
+
 
         #endregion Delegates
     }
